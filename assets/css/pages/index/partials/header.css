@@ -1,0 +1,14 @@
+header {
+  padding: 10px 40px;
+  background: var(--fundo-primario);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}

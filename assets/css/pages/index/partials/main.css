@@ -1,0 +1,195 @@
+main {
+  background: var(--fundo-primario);
+  color: var(--cor-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.container {
+  background: var(--cor-fundo-card);
+  padding: 48px;
+  border-radius: 32px;
+}
+
+.title-subtitle {
+  font-family: var(--font-geist);
+  padding-bottom: 40px;
+}
+
+.title-subtitle h1 {
+  font-size: 24px;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+.campo-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  margin-bottom: 40px;
+  background: var(--fundo-campo-texto);
+  font-family: var(--font-jetbrains-mono);
+  border-radius: 32px;
+}
+
+.campo-text p {
+  font-size: 24px;
+  color: var(--texto-senha);
+}
+
+.campo-text button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.forca-senha {
+  padding-bottom: 40px;
+}
+
+.forca-senha .texts {
+  font-family: var(--font-jetbrains-mono);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+.barra-trilho {
+  width: 100%;
+  height: 6px;
+  background: #2a2a2a;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barra-trilho .barra-preenchimento {
+  height: 100%;
+  width: 100%;
+  background: var(--accent-color);
+  border-radius: 999px;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+.comprimento-senha .texts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-jetbrains-mono)
+}
+
+.comprimento-senha .texts .valor-comprimento {
+  font-size: 24px;
+  color: #C3F5FF;
+}
+
+#slider-comprimento {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #2a2a2a;
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+/* O bolinha (thumb) */
+#slider-comprimento::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Firefox */
+#slider-comprimento::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: none;
+  cursor: pointer;
+}
+
+#gerador-senha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 20px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  color: #00626E;
+  font-size: 17px;
+  margin-top: 40px
+}
+
+.opcoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.opcao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--fundo-campo-texto);
+  padding: 16px 20px;
+  border-radius: 32px;
+  cursor: pointer;
+  font-family: var(--font-geist);
+  font-size: 14px;
+  color: var(--cor-texto);
+}
+
+/* Esconde o checkbox nativo */
+.opcao input {
+  display: none;
+}
+
+/* Trilho do toggle */
+.toggle {
+  width: 44px;
+  height: 24px;
+  background: #2a2a2a;
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+/* Bolinha */
+.toggle::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #555;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Estado ativo (checked) */
+.opcao input:checked + .toggle {
+  background: var(--accent-color);
+}
+
+.opcao input:checked + .toggle::after {
+  transform: translateX(20px);
+  background: white;
+}

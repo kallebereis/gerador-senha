@@ -1,0 +1,14 @@
+:root {
+  /* Cores */
+  --fundo-primario: #131314;
+  --cor-texto: #BAC9CC;
+  --accent-color: #00E5FF;
+  --cor-link: #BAC9CC;
+  --cor-fundo-card: #1C1B1C;
+  --fundo-campo-texto: #0E0E0F;
+  --texto-senha: #00DAF3;
+
+  /* Fontes */
+  --font-geist: 'Geist', sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+}

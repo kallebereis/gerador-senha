@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/global/global.css" />
+    <link rel="stylesheet" href="./assets/css/pages/index/index.css" />
+    <title>Gerador de Senhas</title>
+  </head>
+  <body>
+    <header>
+      <a href="#">
+        <img
+          src="./assets/images/logotipo.png"
+          alt="Logotipo do Gerador de Senhas"
+        />
+      </a>
+
+      <div class="settings-user">
+        <img
+          src="./assets/icons/pages/index/settings.svg"
+          alt="Ícone de Configurações"
+        />
+        <img
+          src="./assets/icons/pages/index/user-perfil.svg"
+          alt="Ícone de Usuário"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="title-subtitle">
+          <h1>Gerador de Senhas</h1>
+          <p>Personalize sua senha de alta segurança com padrões militares.</p>
+        </div>
+        <div class="campo-text">
+          <p>K#9pL2v@X1!</p>
+          <button>
+            <img
+              src="./assets/icons/pages/index/button-copiar.svg"
+              alt="Ícone de Copiar"
+            />
+          </button>
+        </div>
+        <div class="forca-senha">
+          <div class="texts">
+            <p>FORÇA DA SENHA</p>
+            <p>SEGURANÇA MÁXIMA</p>
+          </div>
+          <div class="barra-trilho">
+            <div class="barra-preenchimento"></div>
+          </div>
+        </div>
+        <div class="comprimento-senha">
+          <div class="texts">
+            <p>COMPRIMENTO</p>
+            <p class="valor-comprimento">16</p>
+          </div>
+          <input
+            type="range"
+            min="8"
+            max="32"
+            value="16"
+            id="slider-comprimento"
+          />
+        </div>
+        <div class="opcoes">
+          <label class="opcao">
+            <span>Símbolos</span>
+            <input type="checkbox" checked />
+            <div class="toggle"></div>
+          </label>
+
+          <label class="opcao">
+            <span>Números</span>
+            <input type="checkbox" checked />
+            <div class="toggle"></div>
+          </label>
+
+          <label class="opcao">
+            <span>Maiúsculas</span>
+            <input type="checkbox" />
+            <div class="toggle"></div>
+          </label>
+
+          <label class="opcao">
+            <span>Minúsculas</span>
+            <input type="checkbox" checked />
+            <div class="toggle"></div>
+          </label>
+        </div>
+        <button id="gerador-senha">
+          <img
+            src="./assets/icons/pages/index/reload.svg"
+            alt="Ícone de Reload"
+          />
+          Gerar Nova Senha
+        </button>
+      </div>
+    </main>
+    <footer>
+      <a href="#">
+        <img
+          src="./assets/images/logotipo.png"
+          alt="Logotipo do Gerador de Senhas"
+        />
+      </a>
+
+      <div class="links">
+        <a href="#">SEGURANÇA</a>
+        <a href="#">API</a>
+        <a href="#">SUPORTE</a>
+      </div>
+    </footer>
+  </body>
+</html>
