@@ -79,7 +79,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: var(--font-jetbrains-mono)
+  font-family: var(--font-jetbrains-mono);
+  font-size: 12px;
 }
 
 .comprimento-senha .texts .valor-comprimento {
@@ -192,4 +193,23 @@ main {
 .opcao input:checked + .toggle::after {
   transform: translateX(20px);
   background: white;
+}
+
+.copiar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.copiar .texto-copiado {
+  display: none;
+  position: absolute;
+  top: -50px;
+  text-align: center;
+  background: var(--accent-color);
+  border-radius: 1rem;
+  padding: 8px;
+  color: white;
+  width: 150px;
 }

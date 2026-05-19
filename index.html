@@ -34,13 +34,16 @@
           <p>Personalize sua senha de alta segurança com padrões militares.</p>
         </div>
         <div class="campo-text">
-          <p>K#9pL2v@X1!</p>
-          <button>
-            <img
-              src="./assets/icons/pages/index/button-copiar.svg"
-              alt="Ícone de Copiar"
-            />
-          </button>
+          <p id="exibidor-senha">K#9pL2v@X1!</p>
+          <div class="copiar">
+            <span class="texto-copiado">Senha Copiada</span>
+            <button id="button-copiar">
+              <img
+                src="./assets/icons/pages/index/button-copiar.svg"
+                alt="Ícone de Copiar"
+              />
+            </button>
+          </div>
         </div>
         <div class="forca-senha">
           <div class="texts">
@@ -58,7 +61,7 @@
           </div>
           <input
             type="range"
-            min="8"
+            min="6"
             max="32"
             value="16"
             id="slider-comprimento"
@@ -67,25 +70,25 @@
         <div class="opcoes">
           <label class="opcao">
             <span>Símbolos</span>
-            <input type="checkbox" checked />
+            <input type="checkbox" checked id="simbolos"/>
             <div class="toggle"></div>
           </label>
 
           <label class="opcao">
             <span>Números</span>
-            <input type="checkbox" checked />
+            <input type="checkbox" checked id="numeros"/>
             <div class="toggle"></div>
           </label>
 
           <label class="opcao">
             <span>Maiúsculas</span>
-            <input type="checkbox" />
+            <input type="checkbox" id="maiusculas"/>
             <div class="toggle"></div>
           </label>
 
           <label class="opcao">
             <span>Minúsculas</span>
-            <input type="checkbox" checked />
+            <input type="checkbox" checked id="minusculas"/>
             <div class="toggle"></div>
           </label>
         </div>
@@ -112,5 +115,7 @@
         <a href="#">SUPORTE</a>
       </div>
     </footer>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
