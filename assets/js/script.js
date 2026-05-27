@@ -3,7 +3,8 @@ const buttonCopiar = document.getElementById('button-copiar');
 const sliderComprimento = document.getElementById('slider-comprimento');
 const valorComprimento = document.querySelector('.valor-comprimento');
 const buttonGerarSenha = document.getElementById('gerador-senha');
-const spanTextoCopiado = document.querySelector('.texto-copiado')
+const spanTextoCopiado = document.querySelector('.texto-copiado');
+const barraPreenchimento = document.querySelector('.barra-preenchimento');
 
 // Opções Checkbox
 const checkboxSimbolos = document.getElementById('simbolos');
@@ -40,6 +41,11 @@ function gerarSenha() {
     caracteres += minusculas;
   }
 
+  if (caracteres === '') {
+    exibidorSenha.textContent = 'Selecione uma opção';
+    return;
+  }
+
   let senha = '';
 
   for (let i = 0; i < sliderComprimento.value; i++) {
@@ -48,6 +54,17 @@ function gerarSenha() {
   }
 
   exibidorSenha.textContent = senha;
+
+  if (senha.length < 10) {
+    barraPreenchimento.style.width = '33%';
+    barraPreenchimento.style.background = 'red';
+  } else if (senha.length === 10 || senha.length <= 16) {
+    barraPreenchimento.style.width = '66%';
+    barraPreenchimento.style.background = 'yellow';
+  } else {
+    barraPreenchimento.style.width = '100%';
+    barraPreenchimento.style.background = 'green';
+  }
 }
 
 buttonGerarSenha.addEventListener('click', gerarSenha);
@@ -59,6 +76,6 @@ buttonCopiar.addEventListener('click', () => {
   setTimeout(() => {
     spanTextoCopiado.style.display = 'none';
   }, 2000);
-})
+});
 
 gerarSenha();
